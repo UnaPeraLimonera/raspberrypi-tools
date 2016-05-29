@@ -1,0 +1,1 @@
+Android app for monitoring and managing a Raspberry Pi via SSH connection.

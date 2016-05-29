@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_main_option"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="@string/menu_navdrawer_main"/>
+        <item
+            android:id="@+id/menu_commandline_option"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="@string/menu_navdrawer_commandline"/>
+        <item
+            android:id="@+id/menu_file_explorer_option"
+            android:icon="@android:drawable/ic_menu_set_as"
+            android:title="@string/menu_navdrawer_file_explorer"/>
+    </group>
+
+    <item
+        android:id="@+id/menu_navigation_subheader"
+        android:title="@string/menu_navdrawer_others_title">
+        <menu>
+            <item
+                android:id="@+id/menu_others_configuration"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="@string/menu_navdrawer_others_configuration"/>
+            <item
+                android:id="@+id/menu_others_logout"
+                android:icon="@android:drawable/ic_delete"
+                android:title="@string/menu_navdrawer_others_logout"/>
+        </menu>
+    </item>
+</menu>

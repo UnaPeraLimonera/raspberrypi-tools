@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_navview">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@color/colorPrimaryDark"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/imageView" />
+
+
+    <TextView
+        android:id="@+id/tv_header_navview_name_raspberry"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raspberry Pi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textStyle="bold"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tv_header_navview_ip_raspberry"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:textStyle="normal"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_column="0"
+        android:layout_alignTop="@+id/tv_header_navview_name_raspberry"
+        android:layout_alignStart="@+id/tv_header_navview_name_raspberry"
+        android:layout_marginTop="36dp" />
+
+
+</RelativeLayout>
