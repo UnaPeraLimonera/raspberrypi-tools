@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Raspberry Pi Checker</string>
+    <string name="app_name">Raspberry Pi Tools</string>
     <string name="dialog_charging">Carregant...</string>
     <string name="lbl_tv_memfree">RAM Lliure:</string>
     <string name="lbl_tv_memtotal">RAM Total:</string>

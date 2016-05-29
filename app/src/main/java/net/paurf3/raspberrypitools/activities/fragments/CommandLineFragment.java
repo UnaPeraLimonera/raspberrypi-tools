@@ -35,10 +35,7 @@ public class CommandLineFragment extends Fragment {
 
     private ProgressDialog reconnectionPD;
 
-
     private String prompt;
-
-    //public Ssh ssh;
 
 
     public CommandLineFragment() {

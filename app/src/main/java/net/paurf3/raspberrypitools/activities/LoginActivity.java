@@ -49,10 +49,14 @@ public class LoginActivity extends AppCompatActivity {
         etPortLogin = (EditText) findViewById(R.id.et_port_login);
 
         //TODO PARA DESARROLLO: Ponemos los datos del servidor en los campos
-        etUserLogin.setText("root");
-        etPasswordLogin.setText("raspbian");
-        etHostLogin.setText("192.168.1.4");
-        etPortLogin.setText("22");
+//        etUserLogin.setText("root");
+//        etPasswordLogin.setText("raspbian");
+//        etHostLogin.setText("192.168.1.4");
+//      etPortLogin.setText("22");
+        etUserLogin.setText(sharedPref.getString("saved_pref_user", ""));
+        etPasswordLogin.setText(sharedPref.getString("saved_pref_password", ""));
+        etHostLogin.setText(sharedPref.getString("saved_pref_host", ""));
+        etPortLogin.setText(Integer.toString(sharedPref.getInt("saved_pref_port", 22)));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_connect_login);
@@ -60,9 +64,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO Guardamos las credenciales en opciones
-                sharedPrefEditor.putString("saved_pref_user",etUserLogin.getText().toString());
-                sharedPrefEditor.putString("saved_pref_password",etPasswordLogin.getText().toString());
-                sharedPrefEditor.putString("saved_pref_host",etHostLogin.getText().toString());
+                sharedPrefEditor.putString("saved_pref_user", etUserLogin.getText().toString());
+                sharedPrefEditor.putString("saved_pref_password", etPasswordLogin.getText().toString());
+                sharedPrefEditor.putString("saved_pref_host", etHostLogin.getText().toString());
                 sharedPrefEditor.putInt("saved_pref_port", Integer.parseInt(etPortLogin.getText().toString()));
                 sharedPrefEditor.commit();
 
@@ -72,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
     class AsyncTaskSSHConnect extends AsyncTask<String, Void, Ssh> {
